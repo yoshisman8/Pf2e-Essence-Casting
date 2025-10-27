@@ -1,0 +1,59 @@
+{
+  "id": "pf2e-essence-casting",
+  "title": "Pf2e - Essence Casting",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "Vyklade",
+      "discord": "vyklade",
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "canUpload": true,
+	"pf2e-essence-casting": {
+		"pf2e-homebrew": {
+			"featTraits": {
+				"terminus": {
+					"label": "Terminus",
+					"description": "<p>Terminus actions specify a cycle, which indicates the benefit your terminus provides you until the end of the current encounter where the cycle number is the number of times you have used that terminus action during the current encounter. You gain no additional benefits for using a terminus action if you have already reached its highest cycle in the current encounter.</p>"
+				}
+			}
+		}
+	}
+  },
+    "esmodules": [
+        "scripts/essence.js"
+    ],
+  "packs": [
+    {
+      "name": "essence-casting-features",
+      "label": "Essence Casting Features",
+      "path": "packs/essence-casting-features",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pf2e",
+      "flags": {}
+    },
+    {
+      "name": "essence-casting-macros",
+      "label": "Essence Casting Macros",
+      "path": "packs/essence-casting-macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pf2e",
+      "flags": {}
+    }
+  ],
+  "description": ""
+}
