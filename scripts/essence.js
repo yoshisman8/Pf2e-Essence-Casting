@@ -98,6 +98,10 @@ async function ProcessMP(actor, key, level, entry){
 }
 
 Hooks.on('updateItem', (item, data, meta, id) => {
+    const IsEssenceCaster = await item.actor.getFlag('pf2e', 'isEssenceCaster') ?? false;
+
+    if (!IsEssenceCaster) return;
+
     if (item.type != "spellcastingEntry") return;
     
     if (item.isInnate || item.isFocusPool || item.isEphemeral || item.isRitual) return;
